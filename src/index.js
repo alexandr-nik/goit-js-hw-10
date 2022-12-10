@@ -4,7 +4,7 @@ import { fetchCountries } from './js/fetchCountries';
 import { clearCountyInfoList } from './js/render';
 
 import { getRefs } from './js/refs';
-refs = getRefs();
+const refs = getRefs();
 
 const DEBOUNCE_DELAY = 300;
 
