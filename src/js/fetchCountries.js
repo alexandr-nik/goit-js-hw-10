@@ -9,8 +9,7 @@ export function fetchCountries(name) {
   fetch(url)
     .then(r => {
       if (!r.ok) {
-        Notiflix.Notify.failure('Oops, there is no country with that name');
-        clearCountyInfoList();
+        throw new Error('Oops, there is no country with that name');
       }
       return r;
     })
@@ -24,5 +23,9 @@ export function fetchCountries(name) {
       } else {
         renderCountry(array);
       }
+    })
+    .catch(e => {
+      Notiflix.Notify.failure(`${e}`);
+      clearCountyInfoList();
     });
 }
