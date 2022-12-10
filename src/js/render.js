@@ -1,6 +1,4 @@
-import getRefs from './refs'
-
-const refs = getRefs();
+import { refs } from "./refs";
 
 export function clearCountyInfoList() {
   refs.countryInfo.innerHTML = '';

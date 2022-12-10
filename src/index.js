@@ -2,9 +2,7 @@ import './css/styles.css';
 import debounce from 'lodash.debounce';
 import { fetchCountries } from './js/fetchCountries';
 import { clearCountyInfoList } from './js/render';
-
-import { getRefs } from './js/refs';
-const refs = getRefs();
+import { refs } from './js/refs';
 
 const DEBOUNCE_DELAY = 300;
 
