@@ -23,7 +23,6 @@ ul{
 }
 img{
   display: block;
-  margin-left: 10px;
   margin-right: 10px;
 }
 .flags{
@@ -32,4 +31,13 @@ img{
 }
 li{
   margin-bottom: 10px;
+}
+.flex{
+  font-size: large;
+  font-weight: bold;
+  display: flex;
+ 
+}
+span.bold{
+  font-weight: bold;
 }
