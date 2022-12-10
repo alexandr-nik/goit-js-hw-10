@@ -1,21 +1,20 @@
-import { refs } from "./refs";
+import { refs } from './refs';
 
 export function clearCountyInfoList() {
   refs.countryInfo.innerHTML = '';
 }
 
 export function renderCountry(r) {
-  if (r.message == 'Not Found') {
-    return;
-  } else if (r.length == 1) {
+  if (r.length == 1) {
+    const { flags, name, capital, population, languages } = r[0];
     const render = `<ul>
-    <li class="flex"><img src="${r[0].flags.svg}" alt="${
-      r[0].name.official
-    }" width="30px"> ${r[0].name.official}</li>
-           <li><span class="bold">Capital:</span> ${r[0].capital}</li>
-          <li><span class="bold">Population:</span> ${r[0].population}</li>
+    <li class="flex"><img src="${flags.svg}" alt="${
+      name.official
+    }" width="30px"> ${name.official}</li>
+           <li><span class="bold">Capital:</span> ${capital}</li>
+          <li><span class="bold">Population:</span> ${population}</li>
           <li><span class="bold">Languages:</span> ${Object.values(
-            r[0].languages
+            languages
           )}</li>
          </ul>`;
     refs.countryInfo.innerHTML = render;

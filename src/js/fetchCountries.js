@@ -5,7 +5,7 @@ import { clearCountyInfoList } from './render';
 const URL = 'https://restcountries.com/v3.1/name/';
 
 export function fetchCountries(name) {
-  const url = `${URL}${name}`;
+  const url = `${URL}${name}?fields=name,capital,population,languages,flags`;
   fetch(url)
     .then(r => {
       if (!r.ok) {
